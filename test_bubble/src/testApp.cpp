@@ -25,6 +25,10 @@ void testApp::keyPressed(int key){
 		case '1':
 			bubble.visible = !bubble.visible;
 			break;
+		case '2':
+			bubble.fading = !bubble.fading;
+			break;
+
 		default:
 			break;
 	}
