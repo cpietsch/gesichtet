@@ -255,6 +255,7 @@
 			isa = PBXProject;
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_bubble" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -331,7 +332,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -341,6 +342,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -356,7 +358,7 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -364,7 +366,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -375,6 +377,7 @@
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -390,7 +393,7 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -477,6 +480,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -563,6 +567,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
