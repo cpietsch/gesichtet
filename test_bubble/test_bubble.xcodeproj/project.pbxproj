@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF6C96761781AF5700147898 /* Bubble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF6C96751781AF5700147898 /* Bubble.cpp */; };
+		AF6C96D91781BBA700147898 /* ofxEasingFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF6C96D71781BBA700147898 /* ofxEasingFunc.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -61,8 +62,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AF6C96741781AF5700147898 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
-		AF6C96751781AF5700147898 /* Bubble.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bubble.cpp; sourceTree = "<group>"; };
+		AF6C96741781AF5700147898 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = ../../classes/Bubble.h; sourceTree = "<group>"; };
+		AF6C96751781AF5700147898 /* Bubble.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bubble.cpp; path = ../../classes/Bubble.cpp; sourceTree = "<group>"; };
+		AF6C96D71781BBA700147898 /* ofxEasingFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxEasingFunc.cpp; path = ../../../addons/ofxEasingFunc/src/ofxEasingFunc.cpp; sourceTree = SOURCE_ROOT; };
+		AF6C96D81781BBA700147898 /* ofxEasingFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxEasingFunc.h; path = ../../../addons/ofxEasingFunc/src/ofxEasingFunc.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -117,9 +120,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF6C96D01781BB8900147898 /* ofxEasingFunc */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C96D21781BB9700147898 /* src */,
+			);
+			name = ofxEasingFunc;
+			sourceTree = "<group>";
+		};
+		AF6C96D21781BB9700147898 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C96D71781BBA700147898 /* ofxEasingFunc.cpp */,
+				AF6C96D81781BBA700147898 /* ofxEasingFunc.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				AF6C96D01781BB8900147898 /* ofxEasingFunc */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -232,7 +253,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "blase" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_bubble" */;
 			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -291,6 +312,7 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				AF6C96761781AF5700147898 /* Bubble.cpp in Sources */,
+				AF6C96D91781BBA700147898 /* ofxEasingFunc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +570,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "blase" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_bubble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
