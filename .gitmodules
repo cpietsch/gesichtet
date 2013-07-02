@@ -1,0 +1,3 @@
+[submodule "addons/ofxAwesomium"]
+	path = addons/ofxAwesomium
+	url = git@github.com:WrongEntertainment/ofxAwesomium.git
