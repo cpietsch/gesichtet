@@ -69,7 +69,6 @@ void testApp::initVideo(){
     
     camImg.allocate(camDim.x, camDim.y, OF_IMAGE_COLOR);
     
-    bannerImg.loadImage(bannerFilename);
     
 }
 
@@ -82,7 +81,6 @@ void testApp::addGUI(){
     appGroup.add(externalCam.set("External Cam", false));
     appGroup.add(testVideo.set("Test Video", false));
     appGroup.add(useHD.set("Full HD", false));
-    appGroup.add(bannerFilename.set("Banner Filename", "banner.png"));
     initButton.addListener(this,&testApp::initButtonPressed);
     fullscreenButton.addListener(this,&testApp::fullscreenButtonPressed);
     gui.add(&appGroup);
@@ -138,24 +136,12 @@ void testApp::update() {
     bubles.update();
 }
 
-void testApp::drawBanner(){
-    ofPushMatrix();
-    
-    if(horizontal){
-        ofTranslate(ofGetWindowWidth(),0);
-        ofRotate(90);
-    } else {
-        ofTranslate(0, ofGetWindowHeight()-bannerImg.getHeight());
-    }
-    bannerImg.draw(0, 0);
-    ofPopMatrix();
-}
+
 
 
 void testApp::draw() {
     camImg.draw(0,0,camDim.x * windowRatio, camDim.y * windowRatio);
     
-    drawBanner();
     
     bubles.draw();
     

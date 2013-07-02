@@ -21,7 +21,6 @@ public:
 	void initVideo();
     void fullscreenButtonPressed();
     void windowResized(int w, int h);
-    void drawBanner();
     
     void blobOn( faceFollower face );
     void blobMoved( faceFollower face );
@@ -31,7 +30,7 @@ public:
     ofPtr<ofQTKitGrabber> qtCam;
     ofVideoPlayer player;
 
-	ofImage camImg, gray, graySmall, debugSmall, bannerImg;
+	ofImage camImg, gray, graySmall, debugSmall;
 	ofTexture tex;
 
     ofxPanel gui;
@@ -41,7 +40,6 @@ public:
     float windowRatio;
     bool drawGui;
     
-    ofParameter<string> bannerFilename;
     ofParameter<int> frameRate,trackPersistence,trackDistance;
     ofParameter<bool> horizontal,testVideo,externalCam, useHD,drawDebug;
     ofxButton initButton,fullscreenButton;
