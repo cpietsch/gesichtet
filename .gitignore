@@ -1,6 +1,11 @@
-
+# GENERAL FILES
 *.DS_Store
+
+# XCODE STUFF
 */build
 *.app
 *.pbxuser
 *.mode1v3
+
+# NODE STUFF
+node-server/node_modules/
