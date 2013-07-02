@@ -19,7 +19,8 @@ void testApp::setup(){
 	
 	// Load a file into our WebView instance
 	webCore->setBaseDirectory(ofToDataPath("", true));
-	webView->loadFile("index.html");
+	//webView->loadFile("index.html");
+    webView->loadURL("http://localhost:3000/");
 	
 	webView->focus();
 }
@@ -47,7 +48,7 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255);
-	webTex.draw(0, 0);
+	webTex.draw(mouseX, mouseY, 100, 100);
 	
     if (webView->isLoadingPage()) {
         ofSetColor(0);
