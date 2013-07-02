@@ -34,10 +34,7 @@ void bubleManager::addGUI(ofxPanel& gui){
         gui.add(&group);
     };
     
-void bubleManager::updateFont(int & val){
-        myFont.unbind();
-        myFont.loadFont(fontFace, fontSize, true, true, true);
-    };
+
 
     
 void bubleManager::setup(){
