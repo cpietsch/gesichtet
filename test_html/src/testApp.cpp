@@ -20,11 +20,18 @@ void testApp::setup(){
 	// Load a file into our WebView instance
 	webCore->setBaseDirectory(ofToDataPath("", true));
 	//webView->loadFile("index.html");
-    webView->loadURL("http://localhost:3000/");
+    webView->loadURL("http://localhost/~chrispie/transparent.html");
 	
 	webView->focus();
+    webView->setTransparent(true);
+    webView->createObject(L"MyObject");
+    webView->setObjectCallback(L"MyObject", L"OnSelectItem");
 }
 
+void testApp::OnSelectItem(){
+    
+    
+}
 
 void testApp::exit(){
     // Destroy our WebView instance
@@ -48,7 +55,8 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255);
-	webTex.draw(mouseX, mouseY, 100, 100);
+	//webTex.draw(mouseX, mouseY, 100, 100);
+    webTex.draw(mouseX, mouseY);
 	
     if (webView->isLoadingPage()) {
         ofSetColor(0);

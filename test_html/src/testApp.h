@@ -19,7 +19,7 @@ public:
 	void windowResized(int w, int h);
 	
 	void injectKey(int keyCode);
-	
+	void OnSelectItem();
 	
 private:
 	Awesomium::WebView* webView;

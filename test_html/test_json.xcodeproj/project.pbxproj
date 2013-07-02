@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF8B2F44178364B3008863B8 /* Awesomium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B2F43178364B3008863B8 /* Awesomium.framework */; };
+		AF0092A91781F10E00587164 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF0092961781F10E00587164 /* ofxJSONElement.cpp */; };
+		AF0092AA1781F10E00587164 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF0092A61781F10E00587164 /* json_reader.cpp */; };
+		AF0092AB1781F10E00587164 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF0092A71781F10E00587164 /* json_value.cpp */; };
+		AF0092AC1781F10E00587164 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF0092A81781F10E00587164 /* json_writer.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		BFC4C38A17836C3E00B96555 /* Awesomium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC4C38917836C3E00B96555 /* Awesomium.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworks.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -61,8 +65,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AF8B2F43178364B3008863B8 /* Awesomium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awesomium.framework; path = ../Awesomium.framework; sourceTree = "<group>"; };
+		AF0092961781F10E00587164 /* ofxJSONElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxJSONElement.cpp; path = ../../../addons/ofxJSON/src/ofxJSONElement.cpp; sourceTree = SOURCE_ROOT; };
+		AF0092971781F10E00587164 /* ofxJSONElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxJSONElement.h; path = ../../../addons/ofxJSON/src/ofxJSONElement.h; sourceTree = SOURCE_ROOT; };
+		AF00929B1781F10E00587164 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = autolink.h; path = ../../../addons/ofxJSON/libs/include/json/autolink.h; sourceTree = SOURCE_ROOT; };
+		AF00929C1781F10E00587164 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../addons/ofxJSON/libs/include/json/config.h; sourceTree = SOURCE_ROOT; };
+		AF00929D1781F10E00587164 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = features.h; path = ../../../addons/ofxJSON/libs/include/json/features.h; sourceTree = SOURCE_ROOT; };
+		AF00929E1781F10E00587164 /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = forwards.h; path = ../../../addons/ofxJSON/libs/include/json/forwards.h; sourceTree = SOURCE_ROOT; };
+		AF00929F1781F10E00587164 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = json.h; path = ../../../addons/ofxJSON/libs/include/json/json.h; sourceTree = SOURCE_ROOT; };
+		AF0092A01781F10E00587164 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reader.h; path = ../../../addons/ofxJSON/libs/include/json/reader.h; sourceTree = SOURCE_ROOT; };
+		AF0092A11781F10E00587164 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = value.h; path = ../../../addons/ofxJSON/libs/include/json/value.h; sourceTree = SOURCE_ROOT; };
+		AF0092A21781F10E00587164 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = writer.h; path = ../../../addons/ofxJSON/libs/include/json/writer.h; sourceTree = SOURCE_ROOT; };
+		AF0092A51781F10E00587164 /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = json_batchallocator.h; path = ../../../addons/ofxJSON/libs/src/lib_json/json_batchallocator.h; sourceTree = SOURCE_ROOT; };
+		AF0092A61781F10E00587164 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_reader.cpp; path = ../../../addons/ofxJSON/libs/src/lib_json/json_reader.cpp; sourceTree = SOURCE_ROOT; };
+		AF0092A71781F10E00587164 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_value.cpp; path = ../../../addons/ofxJSON/libs/src/lib_json/json_value.cpp; sourceTree = SOURCE_ROOT; };
+		AF0092A81781F10E00587164 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_writer.cpp; path = ../../../addons/ofxJSON/libs/src/lib_json/json_writer.cpp; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		BFC4C38917836C3E00B96555 /* Awesomium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awesomium.framework; path = ../Awesomium.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -110,16 +128,86 @@
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
-				AF8B2F44178364B3008863B8 /* Awesomium.framework in Frameworks */,
+				BFC4C38A17836C3E00B96555 /* Awesomium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0092941781F10E00587164 /* ofxJSON */ = {
+			isa = PBXGroup;
+			children = (
+				AF0092981781F10E00587164 /* libs */,
+				AF0092951781F10E00587164 /* src */,
+			);
+			name = ofxJSON;
+			sourceTree = "<group>";
+		};
+		AF0092951781F10E00587164 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AF0092961781F10E00587164 /* ofxJSONElement.cpp */,
+				AF0092971781F10E00587164 /* ofxJSONElement.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AF0092981781F10E00587164 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				AF0092A31781F10E00587164 /* src */,
+				AF0092991781F10E00587164 /* include */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		AF0092991781F10E00587164 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AF00929A1781F10E00587164 /* json */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		AF00929A1781F10E00587164 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				AF00929B1781F10E00587164 /* autolink.h */,
+				AF00929C1781F10E00587164 /* config.h */,
+				AF00929D1781F10E00587164 /* features.h */,
+				AF00929E1781F10E00587164 /* forwards.h */,
+				AF00929F1781F10E00587164 /* json.h */,
+				AF0092A01781F10E00587164 /* reader.h */,
+				AF0092A11781F10E00587164 /* value.h */,
+				AF0092A21781F10E00587164 /* writer.h */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		AF0092A31781F10E00587164 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AF0092A41781F10E00587164 /* lib_json */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AF0092A41781F10E00587164 /* lib_json */ = {
+			isa = PBXGroup;
+			children = (
+				AF0092A51781F10E00587164 /* json_batchallocator.h */,
+				AF0092A61781F10E00587164 /* json_reader.cpp */,
+				AF0092A71781F10E00587164 /* json_value.cpp */,
+				AF0092A81781F10E00587164 /* json_writer.cpp */,
+			);
+			name = lib_json;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				AF0092941781F10E00587164 /* ofxJSON */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -149,7 +237,7 @@
 		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF8B2F43178364B3008863B8 /* Awesomium.framework */,
+				BFC4C38917836C3E00B96555 /* Awesomium.framework */,
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
@@ -231,7 +319,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_html" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_json" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -291,6 +379,10 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
+				AF0092A91781F10E00587164 /* ofxJSONElement.cpp in Sources */,
+				AF0092AA1781F10E00587164 /* json_reader.cpp in Sources */,
+				AF0092AB1781F10E00587164 /* json_value.cpp in Sources */,
+				AF0092AC1781F10E00587164 /* json_writer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +401,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(NATIVE_ARCH)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -341,7 +432,7 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = macosx10.7;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
 		};
@@ -349,8 +440,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(NATIVE_ARCH)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -382,25 +472,21 @@
 					"-lpthread",
 					"-mtune=native",
 				);
-				SDKROOT = macosx10.7;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};
 		E4B69B600A3A1757003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../addons/ofxAwesomium\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/..\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -475,7 +561,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -483,18 +569,14 @@
 		E4B69B610A3A1757003C02F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../addons/ofxAwesomium\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/..\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
@@ -568,7 +650,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -576,7 +658,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_html" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "test_json" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
