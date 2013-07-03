@@ -1,14 +1,44 @@
 {
   "messages": [
-    "Online-Forum zum brandenburgischen Hochschulgesetz gestartet",
-    "SKANDALØS Festival",
-    "Sei heldenhaft, komm zur Vollversammlung am 19. Juni!",
-    "FH Potsdam öffnet am 8. Juni 2013 ihre Türen und beteiligt sich am ersten Potsdamer Tag der Wissenschaften",
-    "MuslimWomen und HipHop – Widerstand gegen das Schweigen – 6. Juni 2013Kommunale Zukunftssicherung – Jugendbeteiligung eine Antwort auf drängende kommunale Zukunftsfragen? – 3. Juni 2013",
-    "Noch freie Plätze in Career Service-Seminaren im Sommersemester",
-    "BrandStuVe: Einladung zur Mitgliederversammlung am 5. Juni 2013",
-    "'Kita-Management' – Berufsbegleitende Weiterbildung der FH Potsdam beginnt wieder im August",
-    "Chor der Fachhochschule Potsdam präsentiert am 30. und 31. Mai 2013 ein spaciges Programm",
-    "Es gibt noch Stände beim Tag der offenen Tür zu vermieten!"
+    {
+      "text": "Online-Forum zum brandenburgischen Hochschulgesetz gestartet",
+      "datetime": "19. Juni 2013"
+    },
+    {
+      "text": "SKANDALØS Festival",
+      "datetime": "15. Juni 2013"
+    },
+    {
+      "text": "Sei heldenhaft, komm zur Vollversammlung am 19. Juni!",
+      "datetime": "30. Mai 2013"
+    },
+    {
+      "text": "FH Potsdam öffnet am 8. Juni 2013 ihre Türen und beteiligt sich am ersten Potsdamer Tag der Wissenschaften",
+      "datetime": "29. Mai 2013"
+    },
+    {
+      "text": "MuslimWomen und HipHop – Widerstand gegen das Schweigen – 6. Juni 2013Kommunale Zukunftssicherung – Jugendbeteiligung eine Antwort auf drängende kommunale Zukunftsfragen? – 3. Juni 2013",
+      "datetime": "29. Mai 2013"
+    },
+    {
+      "text": "Noch freie Plätze in Career Service-Seminaren im Sommersemester",
+      "datetime": "28. Mai 2013"
+    },
+    {
+      "text": "BrandStuVe: Einladung zur Mitgliederversammlung am 5. Juni 2013",
+      "datetime": "27. Mai 2013"
+    },
+    {
+      "text": "'Kita-Management' – Berufsbegleitende Weiterbildung der FH Potsdam beginnt wieder im August",
+      "datetime": "27. Mai 2013"
+    },
+    {
+      "text": "Chor der Fachhochschule Potsdam präsentiert am 30. und 31. Mai 2013 ein spaciges Programm",
+      "datetime": "27. Mai 2013"
+    },
+    {
+      "text": "Es gibt noch Stände beim Tag der offenen Tür zu vermieten!",
+      "datetime": "24. Mai 2013"
+    }
   ]
 }
