@@ -3,6 +3,7 @@ var utils = require('../src/utils.js');
 var bubbles = require('../src/bubbles.js');
 var incom = require('../src/incom.js');
 var asta = require('../src/asta.js');
+var twitter = require('../src/twitter.js');
 
 
 /*
@@ -16,7 +17,7 @@ function incomRender(res) {
 
   res.render('incom',
     {
-      title: data.text,
+      text: data.text,
       datetime: data.datetime
     }
   );
@@ -27,19 +28,20 @@ function astaRender(res) {
 
   res.render('asta',
     {
-      title: data.text,
+      text: data.text,
       datetime: data.datetime
     }
   );
 }
 
 function twitterRender(res) {
-  data = '';
+  data = twitter.getData();
 
   res.render('twitter',
     {
-      title: data.text,
-      datetime: data.datetime
+      text: data.text,
+      author: data.author,
+      time: data.time
     }
   );
 }
@@ -80,9 +82,9 @@ exports.index = function(req, res){
   if (random == bubbles.types.incom) {
     incomRender(res);
   } else if (random == bubbles.types.twitter) {
-    astaRender(res);
-  } else if (random == bubbles.types.asta) {
     twitterRender(res);
+  } else if (random == bubbles.types.asta) {
+    astaRender(res);
   } else if (random == bubbles.types.names) {
     namesRender(res);
   } else if (random == bubbles.types.zitate) {

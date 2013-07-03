@@ -1,9 +1,9 @@
 /**
- * Asta bubble
+ * Twitter bubble
  */
 
 var utils = require('./utils.js');
-var data = require('../../data/asta.json');
+var data = require('../../data/twitter.json');
 
 
 exports.getData = function getData() {
@@ -16,11 +16,13 @@ exports.getData = function getData() {
 
   // object welces returnt werden soll
   var tmpData = {
+    author: data.messages[random].author,
     text: data.messages[random].text,
-    datetime: data.messages[random].datetime
+    time: data.messages[random].time
   };
-  //console.log(tmpData.text);
-  //console.log(tmpData.datetime);
+  console.log(tmpData.text);
+  console.log(tmpData.time);
+  console.log(tmpData.author);
 
   return tmpData;
 };
