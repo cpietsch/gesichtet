@@ -4,6 +4,7 @@ var bubbles = require('../src/bubbles.js');
 var incom = require('../src/incom.js');
 var asta = require('../src/asta.js');
 var twitter = require('../src/twitter.js');
+var zitate = require('../src/zitate.js');
 
 
 /*
@@ -47,23 +48,21 @@ function twitterRender(res) {
 }
 
 function namesRender(res) {
-  data = '';
+  data = zitate.getData();
 
-  res.render('names',
-    {
-      title: data.text,
-      datetime: data.datetime
+  res.render('names', {
+      type: data.type,
+      text: data.text
     }
   );
 }
 
 function zitateRender(res) {
-  data = '';
+  data = zitate.getData();
 
-  res.render('zitate',
-    {
-      title: data.text,
-      datetime: data.datetime
+  res.render('zitate', {
+      type: data.type,
+      text: data.text
     }
   );
 }
