@@ -1,5 +1,32 @@
 
 var bubbles = require('../src/bubbles.js');
+var incom = require('../src/incom.js');
+
+
+/*
+----------------------------------------------------------------------
+template render stuff
+----------------------------------------------------------------------
+*/
+
+function incomRender(res) {
+  tmp = incom.getData();
+  
+  res.render('incom',
+    {
+      title: tmp.text,
+      datetime: tmp.datetime
+    }
+  );
+}
+
+
+
+/*
+----------------------------------------------------------------------
+response stuff
+----------------------------------------------------------------------
+*/
 
 /*
  * GET home page.
@@ -9,12 +36,7 @@ exports.index = function(req, res){
   console.log(random);
 
   if (random == bubbles.types.incom) {
-    res.render('incom',
-      {
-        title: 'Wie jetzt, keine Werkschau? Ist ja scheiße.',
-        datetime: 'vor 15 Minuten, Kein Kommentar'
-      }
-    );
+    incomRender(res);
   } else if (random == bubbles.types.twitter) {
     res.render('asta', { title: 'asta' });
   } else if (random == bubbles.types.asta) {
@@ -24,14 +46,8 @@ exports.index = function(req, res){
 };
 
 
-
 exports.incom = function(req, res){
-  res.render('incom',
-    {
-      title: 'Wie jetzt, keine Werkschau? Ist ja scheiße.',
-      datetime: 'vor 15 Minuten, Kein Kommentar'
-    }
-  );
+  incomRender(res);
 };
 
 exports.asta = function(req, res){

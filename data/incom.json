@@ -1,14 +1,40 @@
 {
   "messages": [
-    "Praktikum in Berlin Mobile Frontend Entwickler (m/w)",
-    "Praktikum in Berlin App Entwickler (m/w)",
-    "Praktikum in Berlin UX Designer (m/w)",
-    "DIS_CONNECTED",
-    "Zimmer in Kreuzberg Aug. - Feb. 2014",
-    "Sommer im Berlin. 1 Monat Pauschalurlaub.",
-    "Fotowerkstätten/Arbeiten in den Semesterferien",
-    "Genius Loci Weimar",
-    "morgen Künstlergespräch mit dem Fotografen Tobias Zielony, Ausstellungsbesuch Berlinische Galerie",
-    "Schlosserei in Berlin"
+    {
+        "text": "Praktikum in Berlin Mobile Frontend Entwickler (m/w)",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Praktikum in Berlin App Entwickler (m/w)",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"  
+    },
+    {
+        "text": "DIS_CONNECTED",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Zimmer in Kreuzberg Aug. - Feb. 2014",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Sommer im Berlin. 1 Monat Pauschalurlaub.",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Fotowerkstätten/Arbeiten in den Semesterferien",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Genius Loci Weimar",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "morgen Künstlergespräch mit dem Fotografen Tobias Zielony, Ausstellungsbesuch Berlinische Galerie",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    },
+    {
+        "text": "Schlosserei in Berlin",
+        "datetime": "gestern um 11:19 Uhr, Kein Kommentar"
+    }
   ]
 }
