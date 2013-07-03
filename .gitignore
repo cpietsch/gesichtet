@@ -9,3 +9,4 @@
 
 # NODE STUFF
 node-server/node_modules/
+node-server/public/stylesheets/*.css
