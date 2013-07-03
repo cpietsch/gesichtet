@@ -2,6 +2,8 @@
 
 #include "bubleManager.h"
 
+
+
 bubleManager::bubleManager(){};
 
 bubleManager::~bubleManager(){
@@ -14,6 +16,7 @@ bubleManager::~bubleManager(){
     
 void bubleManager::addGUI(ofxPanel& gui){
         group.setup("Buble Manager");
+    /*
         group.add(drawTest.set("Draw Testbuble", false));
         group.add(messageUrl.set("Message URL", "messages.json"));
         group.add(fontFace.set("FontFace", "arial.ttf"));
@@ -21,7 +24,7 @@ void bubleManager::addGUI(ofxPanel& gui){
         group.add(fontColor.set("FontColor", ofColor(255,255,255),ofColor(0,0),ofColor(255,255)));
         group.add(backgroundColor.set("BackgroundColor", ofColor(255,255,255),ofColor(0,0),ofColor(255,255)));
         group.add(lineForce.set( "Line Force", 0.1, 0.01, 0.5 ));
-    
+    */
         gui.add(&group);
     };
     
@@ -29,23 +32,54 @@ void bubleManager::addGUI(ofxPanel& gui){
 
     
 void bubleManager::setup(){
-        
-            
-        myFbo.allocate(100, myFontHeight+2*fontBoarder, GL_RGBA);
-        myFbo.begin();
-            ofClear(255,255,255);
-        myFbo.end();
-        
-        initialized=true;
-        
-    };
     
+    webTexWidth = 600;
+	webTexHeight = 400;
+   /*
+    webCore = WebCore::Initialize(WebConfig());
+    webView = webCore->CreateWebView(webTexWidth, webTexHeight);
+    */
+    Awesomium::WebCoreConfig config;
+    webCore = new Awesomium::WebCore(config);
+	webView = webCore->createWebView(webTexWidth, webTexHeight);
+    initialized=true;
+    
+    
+}
+    /*
+     
+     
+     WebURL url(WSLit("http://localhost/~chrispie/transparent.html"));
+     webView->LoadURL(url);
+     while (webView->IsLoading())
+     webCore->Update();
+     sleep(300);
+     webCore->Update();
+     BitmapSurface* surface = (BitmapSurface*)webView->surface();
+     ofTexture tex;
+     tex.allocate(webTexWidth,webTexHeight,GL_RGBA);
+     tex.loadData(surface->buffer(), webTexWidth, webTexHeight, GL_BGRA);
+
+
+     */
+
+
 
     
 void bubleManager::createBuble(int id,int x, int y, int headsize) {
     ofTexture tex;
-    tex.allocate(100,100,GL_RGB);
-
+    webView->loadURL("http://localhost/~chrispie/transparent.html");
+    //webView->loadURL("http://twitter.com");
+    webView->focus();
+    webView->setTransparent(true);
+    webView->createObject(L"Dimensions");
+    webView->setObjectCallback(L"Dimensions", L"setDimensions");
+    webCore->update();
+    renderBuffer = webView->render();
+    if (renderBuffer) {
+        tex.loadData(renderBuffer->buffer, webTexWidth, webTexHeight, GL_BGRA);
+    }
+            
     buble* tmp = new buble(id,x,y,headsize,tex);
     bubles.push_back(tmp);
 }
@@ -97,10 +131,7 @@ void bubleManager::draw(){
         for (int i =0; i<bubles.size(); i++) {
             bubles[i]->draw();
         }
-            
-        if(drawTest && initialized){
-            testBuble->draw();
-        }
+        
         
     }
     

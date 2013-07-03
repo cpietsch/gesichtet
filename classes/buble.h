@@ -17,6 +17,7 @@ public:
     int id;
  
     ofPoint anchor;
+    ofPoint offset;
     int headsize, headInterp;
     ofTexture tex;
     bool initialized=false;

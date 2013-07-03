@@ -8,38 +8,27 @@
 #pragma once
 
 #include "ofMain.h"
+#include <Awesomium/WebCore.h>
+
 #include "ofxGui.h"
 #include "buble.h"
 #include "ofxJSONElement.h"
 
+using namespace Awesomium;
 
 class bubleManager {
     
 public:
-    ofTrueTypeFont myFont;
-    ofFbo myFbo;
-    
-    ofxJSONElement json;
-    vector<string> messages;
     vector<buble*> bubles;
-    buble* testBuble=NULL;
-    vector<ofTexture> bubleImages;
-    
-    int myFontHeight;
-    int fontBoarder;
-    bool horizontal;
-    int index, lastLoaded;
-    float lastUpdated, updateInterval;
-    string max_id;
-    
-    ofParameter<float> lineForce;
-    ofParameter<string> fontFace,messageUrl;
-    ofParameter<ofColor> fontColor, backgroundColor;
-    ofParameter<int> fontSize;
-    ofParameter<bool> drawTest;
     ofxGuiGroup group;
     
     bool initialized=false;
+    
+    WebView* webView;
+	WebCore* webCore;
+    int webTexWidth;
+	int webTexHeight;
+    const RenderBuffer* renderBuffer;
 
     bubleManager();
     ~bubleManager();
@@ -53,5 +42,5 @@ public:
     void simulate(int x, int y);
     void update();
     void draw();
-    
+
 };
