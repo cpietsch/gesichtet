@@ -5,6 +5,7 @@ var incom = require('../src/incom.js');
 var asta = require('../src/asta.js');
 var twitter = require('../src/twitter.js');
 var zitate = require('../src/zitate.js');
+var names = require('../src/names.js');
 
 
 /*
@@ -14,57 +15,23 @@ template render stuff
 */
 
 function incomRender(res) {
-  data = incom.getData();
-
-  res.render('incom',
-    {
-      text: data.text,
-      datetime: data.datetime
-    }
-  );
+  res.render('incom', incom.getData());
 }
 
 function astaRender(res) {
-  data = asta.getData();
-
-  res.render('asta',
-    {
-      text: data.text,
-      datetime: data.datetime
-    }
-  );
+  res.render('asta', asta.getData());
 }
 
 function twitterRender(res) {
-  data = twitter.getData();
-
-  res.render('twitter',
-    {
-      text: data.text,
-      author: data.author,
-      time: data.time
-    }
-  );
+  res.render('twitter', twitter.getData());
 }
 
 function namesRender(res) {
-  data = zitate.getData();
-
-  res.render('names', {
-      type: data.type,
-      text: data.text
-    }
-  );
+  res.render('names', names.getData());
 }
 
 function zitateRender(res) {
-  data = zitate.getData();
-
-  res.render('zitate', {
-      type: data.type,
-      text: data.text
-    }
-  );
+  res.render('zitate', zitate.getData());
 }
 
 

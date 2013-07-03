@@ -1,9 +1,9 @@
 /**
- * Zitate bubble
+ * Names bubble
  */
 
 var utils = require('./utils.js');
-var data = require('../../data/zitate.json');
+var data = require('../../data/names.json');
 
 
 exports.getData = function getData() {
@@ -14,5 +14,5 @@ exports.getData = function getData() {
   var random = utils.getRandom(0, totalMessages-1);
   //console.log(random);
 
-  return data.zitate[random];
+  return data.messages[random];
 };

@@ -14,13 +14,5 @@ exports.getData = function getData() {
   var random = utils.getRandom(0, totalMessages-1);
   //console.log(random);
 
-  // object welces returnt werden soll
-  var tmpData = {
-    text: data.messages[random].text,
-    datetime: data.messages[random].datetime
-  };
-  //console.log(tmpData.text);
-  //console.log(tmpData.datetime);
-
-  return tmpData;
+  return data.messages[random];
 };
