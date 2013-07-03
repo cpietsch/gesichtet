@@ -9,7 +9,12 @@ exports.index = function(req, res){
   console.log(random);
 
   if (random == bubbles.types.incom) {
-    res.render('incom', { title: 'incom' });
+    res.render('incom',
+      {
+        title: 'Wie jetzt, keine Werkschau? Ist ja scheiße.',
+        datetime: 'vor 15 Minuten, Kein Kommentar'
+      }
+    );
   } else if (random == bubbles.types.twitter) {
     res.render('asta', { title: 'asta' });
   } else if (random == bubbles.types.asta) {
