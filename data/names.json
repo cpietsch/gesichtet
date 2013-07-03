@@ -1,26 +1,254 @@
 {
-	"names": [
-    "Young Funk",
-    "The Big Freak",
-    "Ice XL",
-    "Black Beat",
-    "OG Mack",
-    "The Big Bone",
-    "Def Mack",
-    "Mac Jam",
-    "Mix Master Daddy",
-    "Prince Tip",
-    "B.B. Dog",
-    "Notorious Junkie",
-    "MC - Fresh",
-    "Lord A Smooth",
-    "Baron Rough a.k.a. Fatty Pockets",
-    "Chief K Scratch a.k.a. Busta Playa",
-    "YR Diesel Jab",
-    "Frosty B Sniper a.k.a. Busta Hitman",
-    "Cherri Real",
-    "Da Girl",
-    "Missy Finesse",
-    "Cristol J."
-	]
+  "names": [
+    {
+      "type": "hip-hop",
+      "text": "Young Funk"
+    },
+    {
+      "type": "hip-hop",
+      "text": "The Big Freak"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Ice XL"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Black Beat"
+    },
+    {
+      "type": "hip-hop",
+      "text": "OG Mack"
+    },
+    {
+      "type": "hip-hop",
+      "text": "The Big Bone"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Def Mack"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Mac Jam"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Mix Master Daddy"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Prince Tip"
+    },
+    {
+      "type": "hip-hop",
+      "text": "B.B. Dog"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Notorious Junkie"
+    },
+    {
+      "type": "hip-hop",
+      "text": "MC - Fresh"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Lord A Smooth"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Baron Rough a.k.a. Fatty Pockets"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Chief K Scratch a.k.a. Busta Playa"
+    },
+    {
+      "type": "hip-hop",
+      "text": "YR Diesel Jab"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Frosty B Sniper a.k.a. Busta Hitman"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Cherri Real"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Da Girl"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Missy Finesse"
+    },
+    {
+      "type": "hip-hop",
+      "text": "Cristol J."
+    },
+
+
+    {
+      "type": "star-wars",
+      "text": "Tides Eclipsegold"
+    },
+    {
+      "type": "star-wars",
+      "text": "Tothize Taygeta"
+    },
+    {
+      "type": "star-wars",
+      "text": "Vega Sintife"
+    },
+    {
+      "type": "star-wars",
+      "text": "Fenesto Rake"
+    },
+    {
+      "type": "star-wars",
+      "text": "Miram Whoffa"
+    },
+    {
+      "type": "star-wars",
+      "text": "Xerita Wasat"
+    },
+    {
+      "type": "star-wars",
+      "text": "Hyadum Solsticeblast"
+    },
+    {
+      "type": "star-wars",
+      "text": "Tabit Asofwot"
+    },
+    {
+      "type": "star-wars",
+      "text": "Rube Gemewh"
+    },
+    {
+      "type": "star-wars",
+      "text": "Hecornp Alhenas"
+    },
+
+
+    {
+      "type": "wow",
+      "text": "Dwiliwin"
+    },
+    {
+      "type": "wow",
+      "text": "Dwomawin"
+    },
+    {
+      "type": "wow",
+      "text": "Cygdush"
+    },
+    {
+      "type": "wow",
+      "text": "Myrg"
+    },
+    {
+      "type": "wow",
+      "text": "Dwarfstomper"
+    },
+    {
+      "type": "wow",
+      "text": "Earthkicker"
+    },
+    {
+      "type": "wow",
+      "text": "Earthwalker"
+    },
+    {
+      "type": "wow",
+      "text": "Eyethrottler"
+    },
+    {
+      "type": "wow",
+      "text": "Grasspunisher"
+    },
+    {
+      "type": "wow",
+      "text": "Grassslasher"
+    },
+    {
+      "type": "wow",
+      "text": "Hobbiteater"
+    },
+    {
+      "type": "wow",
+      "text": "Noseslicer"
+    },
+    {
+      "type": "wow",
+      "text": "BrownHawktongue"
+    },
+    {
+      "type": "wow",
+      "text": "Bullear"
+    },
+    {
+      "type": "wow",
+      "text": "Bullmind"
+    },
+    {
+      "type": "wow",
+      "text": "Dogmind"
+    },
+    {
+      "type": "wow",
+      "text": "GoldBearsoul"
+    },
+    {
+      "type": "wow",
+      "text": "GoldEaglemind"
+    },
+    {
+      "type": "wow",
+      "text": "PurpleBeartooth"
+    },
+    {
+      "type": "wow",
+      "text": "PurpleLionmind"
+    },
+    {
+      "type": "wow",
+      "text": "SilverWolfea"
+    },
+    {
+      "type": "wow",
+      "text": "YellowFalcontooth"
+    },
+    {
+      "type": "wow",
+      "text": "Addrigwyn"
+    },
+    {
+      "type": "wow",
+      "text": "Addruryn"
+    },
+    {
+      "type": "wow",
+      "text": "Aethynvan"
+    },
+    {
+      "type": "wow",
+      "text": "Girraent"
+    },
+    {
+      "type": "wow",
+      "text": "Gluran"
+    },
+    {
+      "type": "wow",
+      "text": "Greysect"
+    },
+    {
+      "type": "wow",
+      "text": "Plaguehunger"
+    }
+
+  ]
+    
 }
