@@ -1,3 +1,6 @@
 # gesichtet
 
-foo, bar bäm!
+TODO:
+
+- Incom schwarzes brett rss feed  
+https://incom.org/action/rss/blackboard
