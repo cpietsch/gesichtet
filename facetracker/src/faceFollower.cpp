@@ -19,7 +19,7 @@ const float bornTime = 0.1;
 void faceFollower::setup(const cv::Rect& track) {
 	rect = toOf(track);
 	cur = rect.getCenter();
-    predicted = estimated = cur;
+    smooth = predicted = estimated = cur;
     
     size.x = rect.getWidth();
     size.y = rect.getHeight();
@@ -67,6 +67,7 @@ void faceFollower::update(const cv::Rect& track) {
 	Mat estimation = KF.correct(measurement);
 	cv::Point statePt(estimation.at<float>(0),estimation.at<float>(1));
 	estimated = toOf(statePt);
+    smooth.interpolate(predicted,0.5);
 	
     float curTime = ofGetElapsedTimef();
     if(!born){

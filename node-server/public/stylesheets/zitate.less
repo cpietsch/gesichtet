@@ -1,9 +1,54 @@
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0px;
+  font: 14px "Helvetica Neue",Arial,sans-serif;
   background-color: transparent;
 }
 
 a {
   color: #00B7FF;
+}
+
+.text {
+	clear:both;
+	font-size: 17px;
+	font-weight: normal;
+	font-family: Georgia, 'Times New Roman', Palatino, serif;
+	margin:0;
+	background: #FFF;
+	position:relative;
+	max-width: 300px;
+	display:inline-block;
+	z-index:100;
+}
+
+.box {
+	background: #FFF;
+	max-width: 300px;
+	
+	padding: 14px;
+	min-width:100px;
+	display:inline-block;
+
+}
+.pfeilOuter {
+	margin-left: auto;
+	margin-right: auto;
+	width: 0px;
+	height: 0px;
+	width: 100%;
+	bottom: 0px;
+	position: relative;
+	display: block;
+	
+}
+.pfeilInner {
+	width: 30px;
+	height: 30px;
+	-webkit-transform: rotate(45deg);
+	position: relative;
+	background: #FFF;
+	display: inherit;
+	margin-left: auto ;
+  	margin-right: auto ;
 }

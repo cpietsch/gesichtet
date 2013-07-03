@@ -8,6 +8,7 @@ void testApp::setup(){
     bubles.setup();
     bubles.addGUI(gui);
     gui.loadFromFile(ofToDataPath("settings.xml"));
+    headsize=50;
 }
 
 //--------------------------------------------------------------
@@ -23,7 +24,13 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    bubles.destroyLastBuble();
+    if(key=='1'){
+        headsize-=10;
+    } else if(key=='2'){
+        headsize+=10;
+    } else if(key=='q'){
+        bubles.destroyLastBuble();
+    }
 }
 
 //--------------------------------------------------------------
@@ -33,7 +40,7 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-    bubles.updateBuble(1,x,y,10);
+    bubles.updateBuble(1,x,y,headsize);
 }
 
 //--------------------------------------------------------------
@@ -43,7 +50,7 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-    bubles.createBuble(1,x,y,10);
+    bubles.createBuble(1,x,y,headsize);
 }
 
 //--------------------------------------------------------------

@@ -162,10 +162,10 @@ void testApp::draw() {
 }
 
 void testApp::blobOn( faceFollower face ){
-    bubles.createBuble(face.getLabel(),face.predicted.x,face.predicted.y,face.sizeSmooth.y);
+    bubles.createBuble(face.getLabel(),face.smooth.x,face.smooth.y,face.sizeSmooth.y);
 }
 void testApp::blobMoved( faceFollower face ){
-    bubles.updateBuble(face.getLabel(),face.predicted.x,face.predicted.y,face.sizeSmooth.y);
+    bubles.updateBuble(face.getLabel(),face.smooth.x,face.smooth.y,face.sizeSmooth.y);
 }
 void testApp::blobOff( faceFollower face ){
     bubles.destroyBuble(face.getLabel());

@@ -21,6 +21,7 @@ class bubleManager {
 public:
     vector<buble*> bubles;
     ofxGuiGroup group;
+    ofShader shader;
     
     bool initialized=false;
     
@@ -42,5 +43,9 @@ public:
     void simulate(int x, int y);
     void update();
     void draw();
+    
+    ofParameter<int> blurLevel;
+    ofParameter<int> blurRange;
+
 
 };

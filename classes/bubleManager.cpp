@@ -16,11 +16,13 @@ bubleManager::~bubleManager(){
     
 void bubleManager::addGUI(ofxPanel& gui){
         group.setup("Buble Manager");
+        group.add(blurLevel.set( "blurLevel", 100, 20, 400 ));
+        group.add(blurRange.set( "blurRange", 100, 20, 400 ));
     /*
         group.add(drawTest.set("Draw Testbuble", false));
         group.add(messageUrl.set("Message URL", "messages.json"));
         group.add(fontFace.set("FontFace", "arial.ttf"));
-        group.add(fontSize.set( "FontSize", 15, 10, 20 ));
+        
         group.add(fontColor.set("FontColor", ofColor(255,255,255),ofColor(0,0),ofColor(255,255)));
         group.add(backgroundColor.set("BackgroundColor", ofColor(255,255,255),ofColor(0,0),ofColor(255,255)));
         group.add(lineForce.set( "Line Force", 0.1, 0.01, 0.5 ));
@@ -68,7 +70,7 @@ void bubleManager::createBuble(int id,int x, int y, int headsize) {
     ofPoint offset(0,0);
 
     //webView->loadURL("http://localhost/~chrispie/transparent.html");
-    webView->loadURL("http://localhost:3000");
+    webView->loadURL("http://localhost:3000/twitter");
     webView->focus();
     webView->setTransparent(true);
     //webView->createObject(L"Dimensions");
@@ -128,7 +130,7 @@ void bubleManager::destroyBuble(int _id){
     }
     
 void bubleManager::updateBuble(int _id,int x, int y, int headsize){
-        for (int i =0; i<bubles.size(); i++) {
+    for (int i =0; i<bubles.size(); i++) {
             if(bubles[i]->id == _id){
                 bubles[i]->update(ofPoint(x,y),headsize);
             }
@@ -150,7 +152,17 @@ void bubleManager::update(){
 void bubleManager::draw(){
         
         for (int i =0; i<bubles.size(); i++) {
-            bubles[i]->draw();
+            int blurDiff = ofClamp(blurLevel-bubles[i]->headsize,0,blurRange);
+            int alpha = ofMap(blurDiff, 0, blurRange, 255, 0);
+            float scale = ofMap(blurDiff, 0, blurRange, 1, 0);
+            
+            ofPushStyle();
+            ofPushMatrix();
+                //ofScale(scale, scale);
+                ofSetColor(255, 255, 255,alpha);
+                bubles[i]->draw();
+            ofPopMatrix();
+            ofPopStyle();
         }
         
         

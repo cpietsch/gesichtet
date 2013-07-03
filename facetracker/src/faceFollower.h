@@ -37,5 +37,5 @@ public:
 	void kill();
 	void draw();
     bool added,born;
-    ofVec2f cur, predicted,estimated,size,sizeSmooth;
+    ofVec2f cur, predicted,estimated,size,sizeSmooth, smooth;
 };

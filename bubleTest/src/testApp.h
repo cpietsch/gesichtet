@@ -24,5 +24,6 @@ class testApp : public ofBaseApp{
 		
     bubleManager bubles;
     ofxPanel gui;
+    int headsize;
 
 };
