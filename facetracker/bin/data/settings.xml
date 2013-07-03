@@ -62,7 +62,7 @@
         <External_Cam>0</External_Cam>
         <Test_Video>0</Test_Video>
         <HD>1</HD>
-        <Debug_View>0</Debug_View>
+        <Debug_View>1</Debug_View>
         <Horizontal_Orientation>0</Horizontal_Orientation>
         <Full_HD>0</Full_HD>
     </General_Settings>

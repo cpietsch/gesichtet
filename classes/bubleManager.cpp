@@ -68,7 +68,7 @@ void bubleManager::createBuble(int id,int x, int y, int headsize) {
     ofPoint offset(0,0);
 
     //webView->loadURL("http://localhost/~chrispie/transparent.html");
-    webView->loadURL("http://localhost:3000/incom");
+    webView->loadURL("http://localhost:3000");
     webView->focus();
     webView->setTransparent(true);
     //webView->createObject(L"Dimensions");
@@ -87,7 +87,7 @@ void bubleManager::createBuble(int id,int x, int y, int headsize) {
         for(int y=0; y<pix.getHeight(); y++){
             for(int x=0; x<pix.getWidth(); x++){
                 int index = pix.getPixelIndex(x, y);
-                float pixel = pix[index];
+                float pixel = pix[index+3];
                 if(pixel!=0) {
                     offset.x=x;
                     offset.y=y;
