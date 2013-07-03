@@ -45,9 +45,7 @@ public:
     ~bubleManager();
     
     void addGUI(ofxPanel& gui);    
-    void updateFont(int & val);
     void setup();
-    void readMessageFile();
     void createBuble(int id,int x, int y, int headsize);
     void destroyLastBuble();
     void destroyBuble(int _id);
@@ -55,6 +53,5 @@ public:
     void simulate(int x, int y);
     void update();
     void draw();
-    string getTextForBuble();
     
 };
