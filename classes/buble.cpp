@@ -15,24 +15,26 @@ buble::~buble(){
 };
 
     
-buble::buble(int _id,int _x, int _y, int _headsize, ofTexture _tex){
+buble::buble(int _id,ofPoint _anchor,ofPoint _offset, int _headsize, ofTexture _tex){
         
-    ofLog(OF_LOG_NOTICE, "init buble %d at %:%d", _id,_x,_y);
+    ofLog(OF_LOG_NOTICE, "init buble %d", _id);
+    cout << _anchor << endl;
+    cout << _offset << endl;
     
     id=_id;
     headsize = _headsize;
     headInterp = _headsize;
-    anchor=ofPoint(_x,_y);
+    anchor=_anchor;
+    offset=_offset;
     tex=_tex;
     
     initialized = true;
 
 };
 
-void buble::update(int x,int y,int _headsize){
+void buble::update(ofPoint _anchor,int _headsize){
     headsize = _headsize;
-    anchor.x=x;
-    anchor.y=y;
+    anchor = _anchor;
 };
 
 
@@ -41,7 +43,7 @@ void buble::draw(){
             
     ofPushStyle();
     ofPushMatrix();
-        ofTranslate(anchor.x, anchor.y+headsize);
+        ofTranslate(anchor.x-offset.x, anchor.y-offset.y-headsize);
         ofSetColor(255, 255, 255);
         tex.draw(0, 0);
     ofPopMatrix();

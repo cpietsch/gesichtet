@@ -64,7 +64,7 @@
         <HD>1</HD>
         <Debug_View>0</Debug_View>
         <Horizontal_Orientation>0</Horizontal_Orientation>
-        <Full_HD>1</Full_HD>
+        <Full_HD>0</Full_HD>
     </General_Settings>
     <Tracking_Settings>
         <trackPersistence>20</trackPersistence>

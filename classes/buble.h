@@ -23,9 +23,9 @@ public:
     bool initialized=false;
     
     ~buble();
-    buble(int _id,int _x, int _y, int _headsize, ofTexture _tex);
+    buble(int _id,ofPoint _anchor,ofPoint _offset, int _headsize, ofTexture _tex);
     
-    void update(int x,int y,int _headsize);
+    void update(ofPoint _anchor,int _headsize);
     void draw();
 
 };

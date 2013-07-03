@@ -132,7 +132,6 @@ void testApp::update() {
     follower.setMaximumDistance(trackDistance);
     follower.setPersistence(trackPersistence);
     
-    bubles.horizontal = horizontal;
     bubles.update();
 }
 

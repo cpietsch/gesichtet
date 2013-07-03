@@ -26,6 +26,7 @@
 		BF4158AB17821CD600B74469 /* Tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF41584817821CD600B74469 /* Tracker.cpp */; };
 		BF4158AC17821CD600B74469 /* Utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF41584917821CD600B74469 /* Utilities.cpp */; };
 		BF4158AD17821CD600B74469 /* Wrappers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF41584A17821CD600B74469 /* Wrappers.cpp */; };
+		BF57DD3C178495A600D727D8 /* Awesomium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF57DD3B178495A600D727D8 /* Awesomium.framework */; };
 		BFF86482178445C0001F7EC5 /* bubleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF86480178445C0001F7EC5 /* bubleManager.cpp */; };
 		BFF86483178445C0001F7EC5 /* buble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF86481178445C0001F7EC5 /* buble.cpp */; };
 		BFFD299B1783062500C056E4 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFFD298A1783062500C056E4 /* ofxBaseGui.cpp */; };
@@ -153,6 +154,7 @@
 		BF41584E17821CD600B74469 /* ofxCv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCv.h; sourceTree = "<group>"; };
 		BF41584F17821CD600B74469 /* update-projects.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "update-projects.py"; sourceTree = "<group>"; };
 		BF5730D7171D8487000A2D6F /* faceDetectorThreaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faceDetectorThreaded.h; sourceTree = "<group>"; };
+		BF57DD3B178495A600D727D8 /* Awesomium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Awesomium.framework; path = ../Awesomium.framework; sourceTree = "<group>"; };
 		BFC4C2E717830AFC00B96555 /* buble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buble.h; path = ../../classes/buble.h; sourceTree = "<group>"; };
 		BFC4C2E817830AFC00B96555 /* bubleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bubleManager.h; path = ../../classes/bubleManager.h; sourceTree = "<group>"; };
 		BFF86480178445C0001F7EC5 /* bubleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bubleManager.cpp; path = ../../classes/bubleManager.cpp; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
+				BF57DD3C178495A600D727D8 /* Awesomium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +350,7 @@
 		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF57DD3B178495A600D727D8 /* Awesomium.framework */,
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
@@ -686,7 +690,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";";
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n\ncp -r \"$TARGET_BUILD_DIR/../../Awesomium.framework\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -867,8 +871,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -981,8 +987,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
