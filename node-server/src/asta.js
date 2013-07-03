@@ -3,7 +3,7 @@
  */
 
 var utils = require('./utils.js');
-var data = require('../../data/incom.json');
+var data = require('../../data/asta.json');
 
 
 exports.getData = function getData() {

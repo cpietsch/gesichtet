@@ -1,6 +1,8 @@
 
+var utils = require('../src/utils.js');
 var bubbles = require('../src/bubbles.js');
 var incom = require('../src/incom.js');
+var asta = require('../src/asta.js');
 
 
 /*
@@ -10,16 +12,59 @@ template render stuff
 */
 
 function incomRender(res) {
-  tmp = incom.getData();
-  
+  data = incom.getData();
+
   res.render('incom',
     {
-      title: tmp.text,
-      datetime: tmp.datetime
+      title: data.text,
+      datetime: data.datetime
     }
   );
 }
 
+function astaRender(res) {
+  data = asta.getData();
+
+  res.render('asta',
+    {
+      title: data.text,
+      datetime: data.datetime
+    }
+  );
+}
+
+function twitterRender(res) {
+  data = '';
+
+  res.render('twitter',
+    {
+      title: data.text,
+      datetime: data.datetime
+    }
+  );
+}
+
+function namesRender(res) {
+  data = '';
+
+  res.render('names',
+    {
+      title: data.text,
+      datetime: data.datetime
+    }
+  );
+}
+
+function zitateRender(res) {
+  data = '';
+
+  res.render('zitate',
+    {
+      title: data.text,
+      datetime: data.datetime
+    }
+  );
+}
 
 
 /*
@@ -28,56 +73,39 @@ response stuff
 ----------------------------------------------------------------------
 */
 
-/*
- * GET home page.
- */
 exports.index = function(req, res){
-  var random = Math.floor((Math.random()*bubbles.types.total)+0);
+  var random = utils.getRandom(0, bubbles.types.total);
   console.log(random);
 
   if (random == bubbles.types.incom) {
     incomRender(res);
   } else if (random == bubbles.types.twitter) {
-    res.render('asta', { title: 'asta' });
+    astaRender(res);
   } else if (random == bubbles.types.asta) {
-    res.render('twitter', { title: 'twitter' });
+    twitterRender(res);
+  } else if (random == bubbles.types.names) {
+    namesRender(res);
+  } else if (random == bubbles.types.zitate) {
+    zitateRender(res);
   }
-
 };
-
 
 exports.incom = function(req, res){
   incomRender(res);
 };
 
 exports.asta = function(req, res){
-  res.render('asta',
-    {
-      title: 'asta'
-    }
-  );
+  astaRender(res);
 };
 
 exports.twitter = function(req, res){
-  res.render('twitter',
-    {
-      title: 'twitter'
-    }
-  );
+  twitterRender(res);
 };
 
 exports.names = function(req, res){
-  res.render('names',
-    {
-      title: 'names'
-    }
-  );
+  namesRender(res);
 };
 
 exports.zitate = function(req, res){
-  res.render('zitate',
-    {
-      title: 'zitate'
-    }
-  );
+  zitateRender(res);
 };
