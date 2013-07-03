@@ -2,6 +2,9 @@
 
 
 void testApp::setup(){
+    //ofSetFullscreen(true);
+    ofSetWindowShape(2200, 700);
+    
 	webTexWidth = ofGetWindowWidth();
 	webTexHeight = ofGetWindowHeight();
     webTex.allocate(webTexWidth, webTexHeight, GL_RGBA);
@@ -20,7 +23,7 @@ void testApp::setup(){
 	// Load a file into our WebView instance
 	webCore->setBaseDirectory(ofToDataPath("", true));
 	//webView->loadFile("index.html");
-    webView->loadURL("http://localhost/~chrispie/transparent.html");
+    webView->loadURL("http://www.openframeworks.cc/");
 	
 	webView->focus();
     webView->setTransparent(true);
@@ -66,46 +69,14 @@ void testApp::draw(){
 
 
 void testApp::keyPressed(int key){
-    switch(key) {
-        case 8: case 127:
-            injectKey(Awesomium::KeyCodes::AK_BACK);
-            return;
-        case 9:
-            injectKey(Awesomium::KeyCodes::AK_TAB);
-            return;
-        case OF_KEY_LEFT:
-            injectKey(Awesomium::KeyCodes::AK_LEFT);
-            return;
-        case OF_KEY_UP:
-            injectKey(Awesomium::KeyCodes::AK_UP);
-            return;
-        case OF_KEY_RIGHT:
-            injectKey(Awesomium::KeyCodes::AK_RIGHT);
-            return;
-        case OF_KEY_DOWN:
-            injectKey(Awesomium::KeyCodes::AK_DOWN);
-            return;
-        case OF_KEY_PAGE_UP:
-            injectKey(Awesomium::KeyCodes::AK_PRIOR);
-            return;
-        case OF_KEY_PAGE_DOWN:
-            injectKey(Awesomium::KeyCodes::AK_NEXT);
-            return;
-        case OF_KEY_HOME:
-            injectKey(Awesomium::KeyCodes::AK_HOME);
-            return;
-        case OF_KEY_END:
-            injectKey(Awesomium::KeyCodes::AK_END);
-            return;
-	}
-    
-	Awesomium::WebKeyboardEvent keyEvent;
-	keyEvent.text[0] = key;
-	keyEvent.unmodifiedText[0] = key;
-	keyEvent.type = Awesomium::WebKeyboardEvent::TYPE_CHAR;
-	keyEvent.virtualKeyCode = key;
-	keyEvent.nativeKeyCode = key;
-	webView->injectKeyboardEvent(keyEvent);
+    if (key == 'f') {
+        // No fullscreen
+        if (ofGetWindowMode() == 0) {
+            ofSetFullscreen(true);
+        } else {
+            ofSetFullscreen(false);
+        }
+    }
 }
 
 
