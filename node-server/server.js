@@ -32,6 +32,8 @@ app.get('/', routes.index);
 app.get('/incom', routes.incom);
 app.get('/asta', routes.asta);
 app.get('/twitter', routes.twitter);
+app.get('/names', routes.names);
+app.get('/zitate', routes.zitate);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
