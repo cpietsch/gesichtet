@@ -5,7 +5,13 @@
     <link rel='stylesheet' href='/stylesheets/incom.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div class="post-wrapper">
+			<div class="post">
+				<h2><%= title %></h2>
+				<div class="meta">
+				  <span class="meta-datetime"><%= datetime %></span>
+				</div>
+			</div>
+		</div>
   </body>
 </html>
