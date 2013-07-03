@@ -5,18 +5,17 @@ var bubbles = require('../src/bubbles.js');
  * GET home page.
  */
 exports.index = function(req, res){
-	var random = Math.floor((Math.random()*bubbles.list.total)+0);
+	var random = Math.floor((Math.random()*bubbles.types.total)+0);
 	console.log(random);
 
-	if (random == bubbles.list.incom) {
-		console.log('incom');
-	} else if (random == bubbles.list.twitter) {
-		console.log('twitter');
-	} else if (random == bubbles.list.asta) {
-		console.log('asta');
-	};
+	if (random == bubbles.types.incom) {
+		res.render('incom', { title: 'incom' });
+	} else if (random == bubbles.types.twitter) {
+		res.render('asta', { title: 'asta' });
+	} else if (random == bubbles.types.asta) {
+		res.render('twitter', { title: 'twitter' });
+	}
 
-  res.render('index', { title: 'Express' });
 };
 
 
