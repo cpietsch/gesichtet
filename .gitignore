@@ -8,5 +8,6 @@
 *.mode1v3
 
 # NODE STUFF
+node-server/npm-debug.log
 node-server/node_modules/
 node-server/public/stylesheets/*.css
