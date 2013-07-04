@@ -2,12 +2,14 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path');
 
+/**
+ * Express.js stuff
+ */
 var app = express();
 
 app.configure(function(){
@@ -27,7 +29,9 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-
+/**
+ * Routes
+ */
 app.get('/', routes.index);
 app.get('/incom', routes.incom);
 app.get('/asta', routes.asta);
@@ -35,6 +39,10 @@ app.get('/twitter', routes.twitter);
 app.get('/names', routes.names);
 app.get('/zitate', routes.zitate);
 
+
+/**
+ * Start the Server
+ */
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
