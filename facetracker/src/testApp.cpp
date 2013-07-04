@@ -139,6 +139,7 @@ void testApp::update() {
 
 
 void testApp::draw() {
+    //ofBackground(0, 0, 0);
     camImg.draw(0,0,camDim.x * windowRatio, camDim.y * windowRatio);
     
     
@@ -172,7 +173,11 @@ void testApp::blobOff( faceFollower face ){
 }
 
 void testApp::windowResized(int w, int h){
-    windowRatio = (float) ofGetWindowWidth()/camDim.x;
+    if(ofGetWindowWidth()>1950){
+        windowRatio = 2880/camDim.x;
+    } else {
+        windowRatio = (float) ofGetWindowWidth()/camDim.x;
+    }
 }
 
 void testApp::keyPressed(int key){

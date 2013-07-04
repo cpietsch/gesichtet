@@ -1,40 +1,40 @@
 {
   "flickr": [
     {
-      "image": "data/flickr_001.png"
+      "image": "flickr/flickr_001.png"
     },
     {
-      "image": "data/flickr_002.png"
+      "image": "flickr/flickr_002.png"
     },
     {
-      "image": "data/flickr_003.png"
+      "image": "flickr/flickr_003.png"
     },
     {
-      "image": "data/flickr_004.png"
+      "image": "flickr/flickr_004.png"
     },
     {
-      "image": "data/flickr_005.png"
+      "image": "flickr/flickr_005.png"
     },
     {
-      "image": "data/flickr_006.png"
+      "image": "flickr/flickr_006.png"
     },
     {
-      "image": "data/flickr_007.png"
+      "image": "flickr/flickr_007.png"
     },
     {
-      "image": "data/flickr_008.png"
+      "image": "flickr/flickr_008.png"
     },
     {
-      "image": "data/flickr_009.png"
+      "image": "flickr/flickr_009.png"
     },
     {
-      "image": "data/flickr_010.png"
+      "image": "flickr/flickr_010.png"
     },
     {
-      "image": "data/flickr_011.png"
+      "image": "flickr/flickr_011.png"
     },
     {
-      "image": "data/flickr_012.png"
+      "image": "flickr/flickr_012.png"
     }
   ]
 }
