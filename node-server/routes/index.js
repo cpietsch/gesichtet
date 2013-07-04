@@ -28,6 +28,7 @@ function twitterRender(res) {
 
 function namesRender(res) {
   res.render('names', names.getData());
+  console.log(names.getData().type);
 }
 
 function zitateRender(res) {

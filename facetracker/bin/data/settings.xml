@@ -62,7 +62,7 @@
         <External_Cam>0</External_Cam>
         <Test_Video>0</Test_Video>
         <HD>1</HD>
-        <Debug_View>1</Debug_View>
+        <Debug_View>0</Debug_View>
         <Horizontal_Orientation>0</Horizontal_Orientation>
         <Full_HD>0</Full_HD>
     </General_Settings>
@@ -94,7 +94,7 @@
         <BackgroundColor>0, 0, 0, 255</BackgroundColor>
         <Line_Force>0.20125</Line_Force>
         <Draw_Testbuble>0</Draw_Testbuble>
-        <blurLevel>322</blurLevel>
+        <blurLevel>196</blurLevel>
         <blurRange>186</blurRange>
     </Buble_Manager>
 </group>

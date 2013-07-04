@@ -179,6 +179,29 @@ void testApp::keyPressed(int key){
     if( key == 'h' ){
 		drawGui = !drawGui;
 	}
+    switch (key) {
+        case '1':
+            bubles.channel = "incom";
+            break;
+        case '2':
+            bubles.channel = "twitter";
+            break;
+        case '3':
+            bubles.channel = "zitate";
+            break;
+        case '4':
+            bubles.channel = "names";
+            break;
+        case '5':
+            bubles.channel = "flickr";
+            break;
+        case '0':
+            bubles.channel = "";
+            break;
+
+        default:
+            break;
+    }
 
 }
 

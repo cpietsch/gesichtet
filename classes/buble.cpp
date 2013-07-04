@@ -44,7 +44,7 @@ void buble::update(ofPoint _anchor,int _headsize){
 void buble::draw(){
 
     
-        ofTranslate(anchor.x-offset.x, anchor.y-offset.y-250);
+        ofTranslate(anchor.x-offset.x, anchor.y-offset.y-headsize*0.8);
         tex.draw(0, 0);
 
     

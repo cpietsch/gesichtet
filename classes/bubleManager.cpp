@@ -70,7 +70,7 @@ void bubleManager::createBuble(int id,int x, int y, int headsize) {
     ofPoint offset(0,0);
 
     //webView->loadURL("http://localhost/~chrispie/transparent.html");
-    webView->loadURL("http://localhost:3000/twitter");
+    webView->loadURL("http://localhost:3000/"+channel);
     webView->focus();
     webView->setTransparent(true);
     //webView->createObject(L"Dimensions");
@@ -79,6 +79,9 @@ void bubleManager::createBuble(int id,int x, int y, int headsize) {
     while (webView->isLoadingPage())
         webCore->update();
     
+    usleep(5000);
+    webCore->update();
+
     renderBuffer = webView->render();
     if (renderBuffer) {
         

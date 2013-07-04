@@ -22,6 +22,8 @@ public:
     vector<buble*> bubles;
     ofxGuiGroup group;
     ofShader shader;
+    string channel;
+
     
     bool initialized=false;
     
