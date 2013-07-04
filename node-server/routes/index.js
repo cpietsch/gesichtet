@@ -6,6 +6,7 @@ var asta = require('../src/asta.js');
 var twitter = require('../src/twitter.js');
 var zitate = require('../src/zitate.js');
 var names = require('../src/names.js');
+var flickr = require('../src/flickr.js');
 
 
 /*
@@ -35,6 +36,10 @@ function zitateRender(res) {
   res.render('zitate', zitate.getData());
 }
 
+function flickrRender(res) {
+  res.render('flickr', flickr.getData());
+}
+
 
 /*
 ----------------------------------------------------------------------
@@ -56,6 +61,8 @@ exports.index = function(req, res){
     namesRender(res);
   } else if (random == bubbles.types.zitate) {
     zitateRender(res);
+  } else if (random == bubbles.types.flickr) {
+    flickrRender(res);
   }
 };
 
@@ -77,4 +84,8 @@ exports.names = function(req, res){
 
 exports.zitate = function(req, res){
   zitateRender(res);
+};
+
+exports.flickr = function(req, res){
+  flickrRender(res);
 };

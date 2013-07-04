@@ -38,6 +38,7 @@ app.get('/asta', routes.asta);
 app.get('/twitter', routes.twitter);
 app.get('/names', routes.names);
 app.get('/zitate', routes.zitate);
+app.get('/flickr', routes.flickr);
 
 
 /**
